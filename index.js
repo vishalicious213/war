@@ -25,7 +25,10 @@ function getNewCards() {
     console.log(deckID)
     fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        console.log(data)
+        renderCards(data.cards[0].image, data.cards[1].image)
+    })
 }
 
 // ⬇️ RENDER APP ⬇️
