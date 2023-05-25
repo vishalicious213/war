@@ -11,15 +11,17 @@ drawBtn.addEventListener("click", getNewCards)
 // ⬇️ EVENT HANDLERS ⬇️
 
 function getNewDeck() {
-    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+    fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
         .then(res => res.json())
         .then(data => {
             console.log(data)
             deckID = data.deck_id
-            console.log(deckID)
         })
 }
 
 function getNewCards() {
-    console.log("GET")
+    console.log(deckID)
+    fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
