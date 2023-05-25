@@ -1,13 +1,12 @@
-const drawBtn = document.getElementById("draw-btn")
+const newDeckBtn = document.getElementById("new-btn")
 
 // ⬇️ EVENT LISTENERS ⬇️
 
-drawBtn.addEventListener("click", drawCard)
+newDeckBtn.addEventListener("click", getNewDeck)
 
 // ⬇️ EVENT HANDLERS ⬇️
 
-function drawCard() {
-    console.log("DRAW")
+function getNewDeck() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => console.log(data))
