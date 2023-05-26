@@ -20,7 +20,8 @@ main {
 
 #cards-left {
     text-align: center;
-    color: gold
+    color: gold;
+    margin-top: 0;
 }
 
 #count {
@@ -34,6 +35,10 @@ main {
     display: flex;
     justify-content: center;
     margin: 1rem 0;
+}
+
+#new-btn-div {
+    margin-bottom: .5rem;
 }
 
 button {

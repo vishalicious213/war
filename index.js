@@ -6,6 +6,7 @@ const player1Card = document.getElementById("player-1-card")
 const player2Card = document.getElementById("player-2-card")
 const player1Wins = document.getElementById("player-1-wins")
 const player2Wins = document.getElementById("player-2-wins")
+const count = document.getElementById("count")
 
 let deckID = "y5rko9w9a7jj"
 
@@ -49,17 +50,19 @@ function getNewCards() {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        renderCards(data.cards[0].image, data.cards[1].image)
+        renderCards(data.cards[0].image, data.cards[1].image, data.remaining)
         getCardValues(data.cards[0].value, data.cards[1].value)
     })
 }
 
 // ⬇️ RENDER APP ⬇️
 
-function renderCards(p1Card, p2Card) {
+function renderCards(p1Card, p2Card, remaining) {
     player1Card.src = p1Card
     player1Wins.innerText = "Player 1"
 
     player2Card.src = p2Card
     player2Wins.innerText = "Player 2"
+
+    count.innerText = remaining
 }
