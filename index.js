@@ -55,12 +55,12 @@ function getNewCards() {
 
 function renderCards(player1Card, player2Card) {
     player1.innerHTML = `
-        <div id="player-1-wins">Player 1</div>
+        <h2 id="player-1-wins">Player 1</h2>
         <img src="${player1Card}">
     `
 
     player2.innerHTML = `
-    <img src="${player2Card}">
-    <div id="player-2-wins">Player 2</div>
+        <img src="${player2Card}">
+        <h2 id="player-2-wins">Player 2</h2>
     `
 }

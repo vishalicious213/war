@@ -66,14 +66,15 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #player-1 img {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #player-2 img {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 #player-1-wins, #player-2-wins {
