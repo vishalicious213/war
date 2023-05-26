@@ -6,6 +6,8 @@ const player1Card = document.getElementById("player-1-card")
 const player2Card = document.getElementById("player-2-card")
 const player1Text = document.getElementById("player-1-text")
 const player2Text = document.getElementById("player-2-text")
+const player1Score = document.getElementById("player-1-score")
+const player2Score = document.getElementById("player-2-score")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
 
@@ -24,9 +26,11 @@ function getCardValues(card1, card2) {
     if (card1value > card2value) {
         player1Text.innerText = "Player 1 wins!"
         p1Score ++
+        player1Score.innerText = p1Score
     } else if (card1value < card2value) {
         player2Text.innerText = "Player 2 wins!"
         p2Score ++
+        player2Score.innerText = p2Score
     } else {
         player1Text.innerText = "WAR!"
         player2Text.innerText = "WAR!"
