@@ -11,6 +11,8 @@ const cardsLeft = document.getElementById("cards-left")
 
 let deckID = "m4v8h4u4vzjs"
 let remainingCards
+let p1Score = 0
+let p2Score = 0
 
 // ⬇️ HELPER FUNCTIONS ⬇️
 
@@ -21,8 +23,10 @@ function getCardValues(card1, card2) {
 
     if (card1value > card2value) {
         player1Text.innerText = "Player 1 wins!"
+        p1Score ++
     } else if (card1value < card2value) {
         player2Text.innerText = "Player 2 wins!"
+        p2Score ++
     } else {
         player1Text.innerText = "WAR!"
         player2Text.innerText = "WAR!"
