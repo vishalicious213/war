@@ -39,6 +39,7 @@ button {
 
 button:hover {
     background-color: goldenrod;
+    cursor: pointer;
 }
 
 /* CARDS */
