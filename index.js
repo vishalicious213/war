@@ -9,7 +9,8 @@ const player2Wins = document.getElementById("player-2-wins")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
 
-let deckID = "y5rko9w9a7jj"
+let deckID = "o2c1qp73svnr"
+let remainingCards
 
 // ⬇️ HELPER FUNCTIONS ⬇️
 
@@ -32,7 +33,13 @@ function getCardValues(card1, card2) {
 
 newDeckBtn.addEventListener("click", getNewDeck)
 
-drawBtn.addEventListener("click", getNewCards)
+drawBtn.addEventListener("click", function() {
+    if (remainingCards === 0) {
+        drawBtn.disabled = true
+    } else {
+        getNewCards()
+    }
+})
 
 // ⬇️ EVENT HANDLERS ⬇️
 
@@ -53,6 +60,7 @@ function getNewCards() {
         console.log(data)
         renderCards(data.cards[0].image, data.cards[1].image, data.remaining)
         getCardValues(data.cards[0].value, data.cards[1].value)
+        remainingCards = data.remaining
     })
 }
 
