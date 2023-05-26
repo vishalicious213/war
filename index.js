@@ -2,13 +2,25 @@ const newDeckBtn = document.getElementById("new-btn")
 const drawBtn = document.getElementById("draw-btn")
 const player1 = document.getElementById("player-1")
 const player2 = document.getElementById("player-2")
-let deckID = ""
+let deckID = "70p5jer1mr9o"
 
 // ⬇️ HELPER FUNCTIONS ⬇️
 
 function getCardValues(card1, card2) {
-    console.log("card 1:", card1)
-    console.log("card 2:", card2)
+    const cardValues = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING", "ACE"]
+    const card1value = cardValues.indexOf(card1)
+    const card2value = cardValues.indexOf(card2)
+
+    console.log("card 1:", card1, card1value)
+    console.log("card 2:", card2, card2value)
+
+    if (card1value > card2value) {
+        console.log("Player 1 wins!")
+    } else if (card1value < card2value) {
+        console.log("Player 2 wins!")
+    } else {
+        console.log("WAR!")
+    }
 }
 
 // ⬇️ EVENT LISTENERS ⬇️
