@@ -28,6 +28,10 @@ main {
     margin: 0 .5rem;
 }
 
+.hide {
+    display: none;
+}
+
 /* BUTTONS */
 
 #new-btn-div, #draw-btn-div {

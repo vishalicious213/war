@@ -7,6 +7,7 @@ const player2Card = document.getElementById("player-2-card")
 const player1Wins = document.getElementById("player-1-wins")
 const player2Wins = document.getElementById("player-2-wins")
 const count = document.getElementById("count")
+const cardsLeft = document.getElementById("cards-left")
 
 let deckID = "y5rko9w9a7jj"
 
@@ -65,4 +66,5 @@ function renderCards(p1Card, p2Card, remaining) {
     player2Wins.innerText = "Player 2"
 
     count.innerText = remaining
+    cardsLeft.classList.remove("hide")
 }
