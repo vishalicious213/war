@@ -11,13 +11,20 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     box-sizing: border-box;
-    border: 1px solid red;
     height: 100vh;
     width: 100%;
 }
 
 /* BUTTONS */
+
+#new-btn-div, #draw-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
 
 button {
     background-color: yellow;
@@ -34,27 +41,22 @@ button:hover {
     background-color: goldenrod;
 }
 
-#new-btn-div, #draw-btn-div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    outline: 1px solid yellow;
-    margin: 1rem 0;
-}
-
 /* CARDS */
 
 #battlefield {
-    outline: 1px solid white;
     width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
-    width: 100%;
+    width: 50vw;
+    max-width: 150px;
 }
 
 #player-1, #player-2 {
-    width: 40%;
-    outline: 1px solid white;
+    height: 40%;
+    margin: 1rem;
 }
