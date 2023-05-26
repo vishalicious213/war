@@ -63,5 +63,21 @@ img {
     width: calc(40% * 5 / 7);
     margin: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+#player-1 img {
+    margin-top: 1rem;
+}
+
+#player-2 img {
+    margin-bottom: 1rem;
+}
+
+#player-1-wins, #player-2-wins {
+    color: gold;
+    text-transform: uppercase;
+    font-weight: 600;
 }
