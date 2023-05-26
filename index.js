@@ -23,18 +23,7 @@ function getCardValues(card1, card2) {
     const card1value = cardValues.indexOf(card1)
     const card2value = cardValues.indexOf(card2)
 
-    if (card1value > card2value) {
-        player1Text.innerText = "Player 1 wins round!"
-        p1Score ++
-        player1Score.innerText = p1Score
-    } else if (card1value < card2value) {
-        player2Text.innerText = "Player 2 wins round!"
-        p2Score ++
-        player2Score.innerText = p2Score
-    } else {
-        player1Text.innerText = "WAR!"
-        player2Text.innerText = "WAR!"
-    }
+    renderScores(card1value, card2value)
 }
 
 // ⬇️ EVENT LISTENERS ⬇️
@@ -86,4 +75,19 @@ function renderCards(p1Card, p2Card, remaining) {
 
     count.innerText = remaining
     cardsLeft.classList.remove("hide")
+}
+
+function renderScores(card1value, card2value) {
+    if (card1value > card2value) {
+        player1Text.innerText = "Player 1 wins round!"
+        p1Score ++
+        player1Score.innerText = p1Score
+    } else if (card1value < card2value) {
+        player2Text.innerText = "Player 2 wins round!"
+        p2Score ++
+        player2Score.innerText = p2Score
+    } else {
+        player1Text.innerText = "WAR!"
+        player2Text.innerText = "WAR!"
+    }
 }

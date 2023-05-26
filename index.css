@@ -98,12 +98,8 @@ img {
     width: 100%;
 }
 
-#player-1 img {
-    margin-bottom: 1rem;
-}
-
-#player-2 img {
-    margin-top: 1rem;
+#player-1-card, #player-2-card {
+    margin: .5rem 0;
 }
 
 #player-1-text, #player-2-text {
@@ -113,10 +109,6 @@ img {
     font-size: 1.25rem;
 }
 
-#player-1-text {
-    margin-top: 0;
-}
-
-#player-2-text {
-    margin-bottom: 0;
+#player-1-text, #player-2-text {
+    margin: 0;
 }
