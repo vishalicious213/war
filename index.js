@@ -11,7 +11,7 @@ const player2Score = document.getElementById("player-2-score")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
 
-let deckID = "m4v8h4u4vzjs"
+let deckID = ""
 let remainingCards
 let p1Score = 0
 let p2Score = 0
@@ -24,11 +24,11 @@ function getCardValues(card1, card2) {
     const card2value = cardValues.indexOf(card2)
 
     if (card1value > card2value) {
-        player1Text.innerText = "Player 1 wins!"
+        player1Text.innerText = "Player 1 wins round!"
         p1Score ++
         player1Score.innerText = p1Score
     } else if (card1value < card2value) {
-        player2Text.innerText = "Player 2 wins!"
+        player2Text.innerText = "Player 2 wins round!"
         p2Score ++
         player2Score.innerText = p2Score
     } else {
