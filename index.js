@@ -17,13 +17,10 @@ function getCardValues(card1, card2) {
     const card2value = cardValues.indexOf(card2)
 
     if (card1value > card2value) {
-        console.log("Player 1 wins!")
         player1Wins.innerText = "Player 1 wins!"
     } else if (card1value < card2value) {
-        console.log("Player 2 wins!")
         player2Wins.innerText = "Player 2 wins!"
     } else {
-        console.log("WAR!")
         player1Wins.innerText = "WAR!"
         player2Wins.innerText = "WAR!"
     }
@@ -60,12 +57,9 @@ function getNewCards() {
 // ⬇️ RENDER APP ⬇️
 
 function renderCards(p1Card, p2Card) {
-    console.log(p1Card, p2Card)
-    // player1Card.innerHTML = `<img src="${p1Card}">`
     player1Card.src = p1Card
     player1Wins.innerText = "Player 1"
 
-    // player2Card.innerHTML = `<img src="${p2Card}">`
     player2Card.src = p2Card
     player2Wins.innerText = "Player 2"
 }
