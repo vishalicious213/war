@@ -9,7 +9,7 @@ const player2Wins = document.getElementById("player-2-wins")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
 
-let deckID = "o2c1qp73svnr"
+let deckID = "m4v8h4u4vzjs"
 let remainingCards
 
 // ⬇️ HELPER FUNCTIONS ⬇️
@@ -49,6 +49,9 @@ function getNewDeck() {
         .then(data => {
             console.log(data)
             deckID = data.deck_id
+            remainingCards = data.remaining
+            count.innerText = data.remaining
+            drawBtn.disabled = false
         })
 }
 
