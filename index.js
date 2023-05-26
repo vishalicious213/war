@@ -2,7 +2,12 @@ const newDeckBtn = document.getElementById("new-btn")
 const drawBtn = document.getElementById("draw-btn")
 const player1 = document.getElementById("player-1")
 const player2 = document.getElementById("player-2")
-let deckID = "70p5jer1mr9o"
+const player1Card = document.getElementById("player-1-card")
+const player2Card = document.getElementById("player-2-card")
+const player1Wins = document.getElementById("player-1-wins")
+const player2Wins = document.getElementById("player-2-wins")
+
+let deckID = "y5rko9w9a7jj"
 
 // ⬇️ HELPER FUNCTIONS ⬇️
 
@@ -11,15 +16,16 @@ function getCardValues(card1, card2) {
     const card1value = cardValues.indexOf(card1)
     const card2value = cardValues.indexOf(card2)
 
-    console.log("card 1:", card1, card1value)
-    console.log("card 2:", card2, card2value)
-
     if (card1value > card2value) {
         console.log("Player 1 wins!")
+        player1Wins.innerText = "Player 1 wins!"
     } else if (card1value < card2value) {
         console.log("Player 2 wins!")
+        player2Wins.innerText = "Player 2 wins!"
     } else {
         console.log("WAR!")
+        player1Wins.innerText = "WAR!"
+        player2Wins.innerText = "WAR!"
     }
 }
 
@@ -53,14 +59,13 @@ function getNewCards() {
 
 // ⬇️ RENDER APP ⬇️
 
-function renderCards(player1Card, player2Card) {
-    player1.innerHTML = `
-        <h2 id="player-1-wins">Player 1</h2>
-        <img src="${player1Card}">
-    `
+function renderCards(p1Card, p2Card) {
+    console.log(p1Card, p2Card)
+    // player1Card.innerHTML = `<img src="${p1Card}">`
+    player1Card.src = p1Card
+    player1Wins.innerText = "Player 1"
 
-    player2.innerHTML = `
-        <img src="${player2Card}">
-        <h2 id="player-2-wins">Player 2</h2>
-    `
+    // player2Card.innerHTML = `<img src="${p2Card}">`
+    player2Card.src = p2Card
+    player2Wins.innerText = "Player 2"
 }
