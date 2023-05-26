@@ -4,8 +4,8 @@ const player1 = document.getElementById("player-1")
 const player2 = document.getElementById("player-2")
 const player1Card = document.getElementById("player-1-card")
 const player2Card = document.getElementById("player-2-card")
-const player1Wins = document.getElementById("player-1-wins")
-const player2Wins = document.getElementById("player-2-wins")
+const player1Text = document.getElementById("player-1-text")
+const player2Text = document.getElementById("player-2-text")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
 
@@ -20,12 +20,12 @@ function getCardValues(card1, card2) {
     const card2value = cardValues.indexOf(card2)
 
     if (card1value > card2value) {
-        player1Wins.innerText = "Player 1 wins!"
+        player1Text.innerText = "Player 1 wins!"
     } else if (card1value < card2value) {
-        player2Wins.innerText = "Player 2 wins!"
+        player2Text.innerText = "Player 2 wins!"
     } else {
-        player1Wins.innerText = "WAR!"
-        player2Wins.innerText = "WAR!"
+        player1Text.innerText = "WAR!"
+        player2Text.innerText = "WAR!"
     }
 }
 
@@ -71,10 +71,10 @@ function getNewCards() {
 
 function renderCards(p1Card, p2Card, remaining) {
     player1Card.src = p1Card
-    player1Wins.innerText = "Player 1"
+    player1Text.innerText = "Player 1"
 
     player2Card.src = p2Card
-    player2Wins.innerText = "Player 2"
+    player2Text.innerText = "Player 2"
 
     count.innerText = remaining
     cardsLeft.classList.remove("hide")

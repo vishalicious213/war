@@ -100,7 +100,7 @@ img {
     margin-top: 1rem;
 }
 
-#player-1-wins, #player-2-wins {
+#player-1-text, #player-2-text {
     color: gold;
     text-transform: uppercase;
     font-weight: 600;
