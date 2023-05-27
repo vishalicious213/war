@@ -95,5 +95,7 @@ function renderScores(card1value, card2value) {
     } else {
         player1Text.innerText = "WAR!"
         player2Text.innerText = "WAR!"
+        player1Text.style.color = "red"
+        player2Text.style.color = "red"
     }
 }
