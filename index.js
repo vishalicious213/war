@@ -43,6 +43,7 @@ function getNewDeck() {
             remainingCards = data.remaining
             count.innerText = data.remaining
             drawBtn.disabled = false
+            cardsLeft.classList.remove("hide")
         })
 }
 
@@ -74,7 +75,6 @@ function renderCards(p1Card, p2Card, remaining) {
     player2Text.innerText = "Player 2"
 
     count.innerText = remaining
-    cardsLeft.classList.remove("hide")
 }
 
 function renderScores(card1value, card2value) {
