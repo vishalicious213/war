@@ -62,8 +62,14 @@ function getNewCards() {
         remainingCards = data.remaining
         if (remainingCards === 0) {
             drawBtn.disabled = true
-            console.log(remainingCards)
-            renderWin()
+
+            if (p1Score > p2Score) {
+                renderWin(1, data.cards[0].image)
+            } else if (p1Score < p2Score) {
+                renderWin(2, data.cards[1].image)
+            } else {
+                renderWin(0)
+            }
         }
     })
 }
@@ -103,8 +109,24 @@ function renderScores(card1value, card2value) {
     }
 }
 
-function renderWin() {
-    battlefield.innerHTML = `
-        <div>WINNER</div>
-    `
+function renderWin(winner, card) {
+    console.log("WINNER!")
+
+    if (winner === 0) {
+        battlefield.innerHTML = `
+            <div>TIE</div>
+        `
+    }
+
+    if (winner === 1) {
+        battlefield.innerHTML = `
+            <div>PLAYER 1 WINS</div>
+        `
+    }
+
+    if (winner === 2) {
+        battlefield.innerHTML = `
+            <div>PLAYER 2 WINS</div>
+        `
+    }
 }
