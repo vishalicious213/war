@@ -10,6 +10,7 @@ const player1Score = document.getElementById("player-1-score")
 const player2Score = document.getElementById("player-2-score")
 const count = document.getElementById("count")
 const cardsLeft = document.getElementById("cards-left")
+const battlefield = document.getElementById("battlefield")
 
 let deckID = ""
 let remainingCards
@@ -62,6 +63,7 @@ function getNewCards() {
         if (remainingCards === 0) {
             drawBtn.disabled = true
             console.log(remainingCards)
+            renderWin()
         }
     })
 }
@@ -99,4 +101,10 @@ function renderScores(card1value, card2value) {
         player1Text.style.color = "red"
         player2Text.style.color = "red"
     }
+}
+
+function renderWin() {
+    battlefield.innerHTML = `
+        <div>WINNER</div>
+    `
 }
