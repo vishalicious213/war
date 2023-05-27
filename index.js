@@ -61,6 +61,7 @@ function getNewCards() {
         remainingCards = data.remaining
         if (remainingCards === 0) {
             drawBtn.disabled = true
+            console.log(remainingCards)
         }
     })
 }

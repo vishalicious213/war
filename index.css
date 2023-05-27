@@ -36,8 +36,12 @@ main {
 
 .points {
     margin: 0;
-    color: whitesmoke;
+    color: gold;
     font-size: 1rem;
+}
+
+#player-1-score, #player-2-score {
+    color: whitesmoke;
 }
 
 /* BUTTONS */
