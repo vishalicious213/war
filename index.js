@@ -80,10 +80,16 @@ function renderCards(p1Card, p2Card, remaining) {
 function renderScores(card1value, card2value) {
     if (card1value > card2value) {
         player1Text.innerText = "Player 1 wins round!"
+        player2Text.innerText = "Player 2 lost round!"
+        player1Text.style.color = "gold"
+        player2Text.style.color = "red"
         p1Score ++
         player1Score.innerText = p1Score
     } else if (card1value < card2value) {
+        player1Text.innerText = "Player 1 lost round!"
         player2Text.innerText = "Player 2 wins round!"
+        player1Text.style.color = "red"
+        player2Text.style.color = "gold"
         p2Score ++
         player2Score.innerText = p2Score
     } else {
