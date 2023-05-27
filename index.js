@@ -30,13 +30,7 @@ function getCardValues(card1, card2) {
 
 newDeckBtn.addEventListener("click", getNewDeck)
 
-drawBtn.addEventListener("click", function() {
-    if (remainingCards === 0) {
-        drawBtn.disabled = true
-    } else {
-        getNewCards()
-    }
-})
+drawBtn.addEventListener("click", getNewCards)
 
 // ⬇️ EVENT HANDLERS ⬇️
 
@@ -44,7 +38,7 @@ function getNewDeck() {
     fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             deckID = data.deck_id
             remainingCards = data.remaining
             count.innerText = data.remaining
@@ -53,14 +47,20 @@ function getNewDeck() {
 }
 
 function getNewCards() {
-    console.log(deckID)
+    if (!deckID) return
+    if (remainingCards === 0) return
+
+    // console.log(deckID)
     fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
         renderCards(data.cards[0].image, data.cards[1].image, data.remaining)
         getCardValues(data.cards[0].value, data.cards[1].value)
         remainingCards = data.remaining
+        if (remainingCards === 0) {
+            drawBtn.disabled = true
+        }
     })
 }
 
