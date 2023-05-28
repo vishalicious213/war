@@ -64,11 +64,11 @@ function getNewCards() {
             drawBtn.disabled = true
 
             if (p1Score > p2Score) {
-                renderWin(1, data.cards[0].image)
+                renderWin(1, data.cards[0].image, data.cards[1].image)
             } else if (p1Score < p2Score) {
-                renderWin(2, data.cards[1].image)
+                renderWin(2, data.cards[1].image, data.cards[0].image)
             } else {
-                renderWin(0)
+                renderWin(0, data.cards[0].image, data.cards[1].image)
             }
         }
     })
@@ -109,7 +109,7 @@ function renderScores(card1value, card2value) {
     }
 }
 
-function renderWin(winner, card) {
+function renderWin(winner, p1card, p2card) {
     console.log("WINNER!")
 
     if (winner === 0) {
