@@ -114,19 +114,28 @@ function renderWin(winner, p1card, p2card) {
 
     if (winner === 0) {
         battlefield.innerHTML = `
-            <div>TIE</div>
+            <div>TIE
+                <img src="${p1card}">
+                <img src="${p2card}">
+            </div>
         `
     }
 
     if (winner === 1) {
         battlefield.innerHTML = `
-            <div>PLAYER 1 WINS</div>
+            <div>PLAYER 1 WINS
+                <img src="${p1card}">
+                <img src="${p2card}">
+            </div>
         `
     }
 
     if (winner === 2) {
         battlefield.innerHTML = `
-            <div>PLAYER 2 WINS</div>
+            <div>PLAYER 2 WINS
+                <img src="${p2card}">
+                <img src="${p1card}">
+            </div>
         `
     }
 }
