@@ -1,1 +1,3 @@
 # The Game of WAR
+
+This is the 3rd project in Module 9 (Working with APIs) of Scrimba's Frontend Developer Path. This project focused on using the fetch API to get data from the Deck of Cards API to create a simplified version of the Game of War. In this version, a card is drawn from a deck for each player. The player with the higher-value card wins the round and gets a point. The winner of the game is the player with the higher score.
