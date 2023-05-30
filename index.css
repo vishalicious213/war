@@ -119,3 +119,32 @@ img {
 #player-1-text, #player-2-text {
     margin: 0;
 }
+
+#results {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#results img {
+    width: 45%;
+}
+
+#results-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tie {
+    outline: 2px solid red;
+    border-radius: .5rem;
+}
+
+.win {
+    outline: 2px solid gold;
+    border-radius: .5rem;
+}
+
+.lost {
+    outline: 2px solid red;
+    border-radius: .5rem;
+}

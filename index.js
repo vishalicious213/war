@@ -114,30 +114,36 @@ function renderWin(winner, p1card, p2card) {
 
     if (winner === 0) {
         battlefield.innerHTML = `
-            <div>
-                <h2>TIE</h2>
-                <img class="tie" src="${p1card}">
-                <img class="tie" src="${p2card}">
+            <div id="results">
+                <h2>TIE 😲</h2>
+                <div id="results-cards">
+                    <img class="tie" src="${p1card}">
+                    <img class="tie" src="${p2card}">
+                </div>
             </div>
         `
     }
 
     if (winner === 1) {
         battlefield.innerHTML = `
-            <div>
-                <h2>PLAYER 1 WINS</h2>
-                <img class="win" src="${p1card}">
-                <img class="lost" src="${p2card}">
+            <div id="results">
+                <h2>PLAYER 1 WINS!</h2>
+                <div id="results-cards">
+                    <img class="win" src="${p1card}">
+                    <img class="lost" src="${p2card}">
+                </div>
             </div>
         `
     }
 
     if (winner === 2) {
         battlefield.innerHTML = `
-            <div>
-                <h2>PLAYER 2 WINS</h2>
-                <img class="lost" src="${p1card}">
-                <img class="win" src="${p2card}">
+            <div id="results">
+                <h2>PLAYER 2 WINS!</h2>
+                <div id="results-cards">
+                    <img class="lost" src="${p1card}">
+                    <img class="win" src="${p2card}">
+                </div>
             </div>
         `
     }
