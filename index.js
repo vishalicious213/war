@@ -35,7 +35,6 @@ newDeckBtn.addEventListener("click", function() {
     } else {
         getNewDeck()
     }
-    // renderNewGame()
 })
 
 drawBtn.addEventListener("click", getNewCards)
@@ -118,6 +117,8 @@ function renderScores(card1value, card2value) {
 
 function renderWin(winner, p1card, p2card) {
     console.log("WINNER!")
+    newDeckBtn.innerText = "New Game"
+    cardsLeft.classList.add("hide")
 
     if (winner === 0) {
         battlefield.innerHTML = `
