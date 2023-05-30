@@ -8,6 +8,8 @@ The layout of my implementation is different from the layout proposed by Scrimba
 
 Deployed at: https://vish213-war.netlify.app/
 
+![](/img/screenshot.jpg)
+
 ## JavaScript concepts
 
 - variables
