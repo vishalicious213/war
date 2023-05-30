@@ -45,7 +45,6 @@ function getNewDeck() {
     fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
             deckID = data.deck_id
             remainingCards = data.remaining
             count.innerText = data.remaining
@@ -58,11 +57,9 @@ function getNewCards() {
     if (!deckID) return
     if (remainingCards === 0) return
 
-    // console.log(deckID)
     fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`)
     .then(res => res.json())
     .then(data => {
-        // console.log(data)
         renderCards(data.cards[0].image, data.cards[1].image, data.remaining)
         getCardValues(data.cards[0].value, data.cards[1].value)
         remainingCards = data.remaining
@@ -116,7 +113,6 @@ function renderScores(card1value, card2value) {
 }
 
 function renderWin(winner, p1card, p2card) {
-    console.log("WINNER!")
     newDeckBtn.innerText = "New Game"
     cardsLeft.classList.add("hide")
 
