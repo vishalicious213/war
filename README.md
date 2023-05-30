@@ -5,3 +5,29 @@ This is the 3rd project in Module 9 (Working with APIs) of Scrimba's [Frontend D
 I veered from the proposed way that the project was built and structured my implementation in a way that makes sense to me, that I've used before. The original version makes use of event listeners that also execute code to act on user input from directly within the listener. I prefer to separate event handlers and event listeners, to make them more independent, so that they can be used by other functions as needed. I view this as being more specific as well. An event handler plays a different role from an event listener, so it makes sense to me that they exist as separate functions.
 
 The layout of my implementation is different from the layout proposed by Scrimba. I also added end-game screens for wins by player 1 or player 2, as well as a screen for tied games. Completed games include a button to begin a new game, as well.
+
+## JavaScript concepts
+
+- variables
+- functions
+- arrays
+    - indexOf()
+- if statements
+- if/else statements
+- fetch
+    - .then()
+    - .json()
+- document.getElementById()
+- element
+    - .addEventListener
+    - .innerText
+    - .innerHtml
+    - .disabled
+    - .classList
+        - .remove()
+        - .add()
+    - .src
+    - .style
+        .color
+- location.reload()
+- string template literals
