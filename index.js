@@ -148,3 +148,18 @@ function renderWin(winner, p1card, p2card) {
         `
     }
 }
+
+function renderNewGame() {
+    battlefield.innerHTML = `
+        <div id="player-1">
+            <h2 id="player-1-text">Player 1</h2>
+            <h2 class="points">Points: <span id="player-1-score"></span></h2>
+            <img id="player-1-card" src="./img/red.jpg" alt="Playing card">
+        </div>
+        <div id="player-2">
+            <img id="player-2-card" src="./img/blue.jpg" alt="Playing card">
+            <h2 id="player-2-text">Player 2</h2>
+            <h2 class="points">Points: <span id="player-2-score"></span></h2>
+        </div>    
+    `
+}
