@@ -126,7 +126,7 @@ img {
 }
 
 #results img {
-    width: 45%;
+    /* width: 45%; */
 }
 
 #results-cards {
@@ -137,14 +137,20 @@ img {
 .tie {
     outline: 2px solid red;
     border-radius: .5rem;
+    width: 45%;
 }
 
 .win {
     outline: 2px solid gold;
     border-radius: .5rem;
+    width: 55%;
 }
 
 .lost {
     outline: 2px solid red;
     border-radius: .5rem;
+    width: 35%;
+    height: 35%;
+    transform: rotate(10deg);
+    align-self: center;
 }
