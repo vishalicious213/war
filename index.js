@@ -116,8 +116,8 @@ function renderWin(winner, p1card, p2card) {
         battlefield.innerHTML = `
             <div>
                 <h2>TIE</h2>
-                <img src="${p1card}">
-                <img src="${p2card}">
+                <img class="tie" src="${p1card}">
+                <img class="tie" src="${p2card}">
             </div>
         `
     }
@@ -126,8 +126,8 @@ function renderWin(winner, p1card, p2card) {
         battlefield.innerHTML = `
             <div>
                 <h2>PLAYER 1 WINS</h2>
-                <img src="${p1card}">
-                <img src="${p2card}">
+                <img class="win" src="${p1card}">
+                <img class="lost" src="${p2card}">
             </div>
         `
     }
@@ -136,8 +136,8 @@ function renderWin(winner, p1card, p2card) {
         battlefield.innerHTML = `
             <div>
                 <h2>PLAYER 2 WINS</h2>
-                <img src="${p2card}">
-                <img src="${p1card}">
+                <img class="lost" src="${p1card}">
+                <img class="win" src="${p2card}">
             </div>
         `
     }
