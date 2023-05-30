@@ -6,6 +6,8 @@ I veered from the proposed way that the project was built and structured my impl
 
 The layout of my implementation is different from the layout proposed by Scrimba. I also added end-game screens for wins by player 1 or player 2, as well as a screen for tied games. Completed games include a button to begin a new game, as well.
 
+Deployed at: https://vish213-war.netlify.app/
+
 ## JavaScript concepts
 
 - variables
